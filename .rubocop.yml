@@ -42,3 +42,7 @@ Style/SymbolArray:
 Rails/FilePath:
   Exclude:
     - "config/environments/development.rb"
+
+Rails/Output:
+  Exclude:
+    - 'db/seeds.rb'
