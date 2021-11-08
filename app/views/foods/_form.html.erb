@@ -4,7 +4,7 @@
     <%= form.text_field :name, required: true %>
   </div>
   <p></p>
-  <%= form.file_field :image %>
+  <%= form.file_field :image, accept: "image/jpg,image/gif,image/png" %>
   <p></p>
   <div>
     <%= form.label :comment %>
