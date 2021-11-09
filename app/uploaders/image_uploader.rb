@@ -46,7 +46,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   def size_range
-    0..5.megabytes
+    0..(5.megabytes)
   end
 
   def filename
@@ -57,6 +57,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def secure_token
     var = :"@#{mounted_as}_secure_token"
-    model.instance_variable_get(var) or model.instance_variable_set(ver, SecureRandom.uuid)
+    model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
   end
 end
